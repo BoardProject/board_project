@@ -6,7 +6,7 @@
   <table class="table">
     <thead class="thead-dark">
       <tr>
-        <th>id</th>
+        <th>글 번호</th>
         <th>제목</th>
         <th>작성일</th>
         <th>조회수</th>

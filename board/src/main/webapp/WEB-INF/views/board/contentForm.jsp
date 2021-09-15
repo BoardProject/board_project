@@ -6,7 +6,7 @@
 <div class="container">
 
 		<button class="btn btn-secondary" onclick="history.back()">뒤로 가기</button>
-		<button id="btn-update" class="btn btn-warning">수정</button>
+		<a href="/board/${board.id}/editForm" class="btn btn-warning">수정</a>
 		<button id = "btn-delete" class="btn btn-dange">삭제</button>
 		<br/><br/>
 		<div>

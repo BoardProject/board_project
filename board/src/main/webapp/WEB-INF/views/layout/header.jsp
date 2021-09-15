@@ -25,7 +25,7 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="#">게시글 조회</a>
+        <a class="nav-link" href="/board">게시글 조회</a>
       </li>
     </ul>
   </div>  
