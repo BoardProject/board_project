@@ -6,10 +6,10 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">번호</th>
+      <th scope="col">제목</th>
+      <th scope="col">작성일</th>
+      <th scope="col">조회 수</th>
     </tr>
   </thead>
   <tbody>
