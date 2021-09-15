@@ -3,35 +3,50 @@
 <%@ include file="layout/header.jsp"%>
 
 <div class="container">
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">번호</th>
-      <th scope="col">제목</th>
-      <th scope="col">작성일</th>
-      <th scope="col">조회 수</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>id</th>
+        <th>제목</th>
+        <th>작성일</th>
+        <th>조회수</th>
+      </tr>
+    </thead>
+   
+	    <tbody>
+	    <c:forEach var="board" items="${boards.content	}">
+	      <tr>
+	        <td>${board.id}</td>
+	        <td>${board.title}</td>
+	        <td>${board.createDate}</td>
+	        <td>${board.count}</td>
+	      </tr>
+	      </c:forEach>
+	    </tbody>
+    
+  </table>
+  
+<ul class="pagination justify-content-center">
+	<c:choose>
+		<c:when test="${boards.first}">
+			<li class="page-item disabled"><a class="page-link" href="?page=${boards.number-1}">Previous</a></li>
+		</c:when>
+		<c:otherwise>
+			<li class="page-item"><a class="page-link" href="?page=${boards.number-1}">Previous</a></li>
+		</c:otherwise>
+	</c:choose>
+	<c:choose>
+		<c:when test="${boards.last}">
+			<li class="page-item disabled"><a class="page-link" href="?page=${boards.number+1}">Next</a></li>
+		</c:when>
+		<c:otherwise>
+			<li class="page-item"><a class="page-link" href="?page=${boards.number+1}">Next</a></li>
+		</c:otherwise>
+	</c:choose>
+
+</ul>
+
 </div>
+
 
 <%@ include file="layout/footer.jsp"%> 
