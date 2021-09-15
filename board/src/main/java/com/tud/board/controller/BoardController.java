@@ -8,7 +8,7 @@ public class BoardController {
 
 	@GetMapping({ "", "/" })
 	public String index() {
-		return "list"; // url 정해서 해야하나...index...?
+		return "list";
 	}
 
 }
