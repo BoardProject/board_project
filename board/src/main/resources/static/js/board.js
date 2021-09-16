@@ -48,7 +48,8 @@ let index = {
 				title: $("#title").val(),
 				content: $("#content").val()
 		};
-		
+	
+
 
 		$.ajax({
 			type : "PUT",
@@ -57,6 +58,8 @@ let index = {
 			contentType : "application/json; charset=utf-8" ,
 			dataType : "json" 
 		}).done(function(resp){
+			console.log(id);
+			console.log(data);
 			alert("수정이 완료되었습니다.");
 			location.href = "/";
 		}).fail(function(error){
