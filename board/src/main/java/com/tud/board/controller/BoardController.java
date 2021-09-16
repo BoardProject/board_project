@@ -14,13 +14,13 @@ public class BoardController {
 	}
 	
 	
-	@PostMapping({ "/write" })
-	public String write() {
-		return "list";
+	@GetMapping({ "/writeForm" })
+	public String writeForm() {
+		return "board/writeForm"; // .jsp
 	}
 	
 
-	@PutMapping({ "/edit" })
+	@GetMapping({ "/edit" })
 	public String edit() {
 		return "editForm";
 	}
