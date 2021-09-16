@@ -4,7 +4,10 @@ let index = {
 		$("#btn-save").on("click" , ()=> { // function(){} , ()=>{} 으로 쓰는 이유는 this를 바인딩하기 위해. function 사용하면 this 가 window 객체 가리켜 오류 날 수 있음
 			this.save();
 		});
-		$("#btn-delete").on("click" , ()=> { // function(){} , ()=>{} 으로 쓰는 이유는 this를 바인딩하기 위해. function 사용하면 this 가 window 객체 가리켜 오류 날 수 있음
+		$("#btn-edit").on("click" , ()=> { 
+			this.edit();
+		});
+		$("#btn-delete").on("click" , ()=> { 
 			this.deleteById();
 		});
 	},
@@ -37,8 +40,35 @@ let index = {
 		
 	},
 	
+	
+	edit: function(){ 
+		let id = $("#id").val();
+		
+		let data = {
+				title: $("#title").val(),
+				content: $("#content").val()
+		};
+		
+
+		$.ajax({
+			type : "PUT",
+			url : "/api/board/"+id, 
+			data : JSON.stringify(data), 
+			contentType : "application/json; charset=utf-8" ,
+			dataType : "json" 
+		}).done(function(resp){
+			alert("수정이 완료되었습니다.");
+			location.href = "/";
+		}).fail(function(error){
+			alert(JSON.stringify(error));
+		});
+		
+	},
+	
+	
+	
 	deleteById: function(){
-		var id = $("#id").text() // val() 이 아니라 text() 갖고와야 한다.
+		let id = $("#id").text()
  
 		$.ajax({
 			type : "DELETE",
