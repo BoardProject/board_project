@@ -3,7 +3,6 @@
 <%@ include file="layout/header.jsp"%>
 
 <div class="container">
-
   <table class="table">
     <thead class="thead-dark">
       <tr>
@@ -26,8 +25,8 @@
 	    </tbody>
     
   </table>
-  
-<ul class="pagination justify-content-center">
+<!-- block 속성의 pagination을 flex 통해 가운데로 옮기기 -->  
+<ul class="pagination justify-content-center"> 
 	<c:choose>
 		<c:when test="${boards.first}">
 			<li class="page-item disabled"><a class="page-link" href="?page=${boards.number-1}">Previous</a></li>
