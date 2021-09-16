@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -41,7 +42,14 @@ public class BoardController {
 		return "board/writeForm"; // .jsp
 	}
 	
-	
+	//게시물 상세 페이지 접속 
+	@GetMapping({"/board/{id}"})
+	public String findById(@PathVariable int id, Model model) {
+		model.addAttribute("board",boardService.read(id));
+		return "board/contentForm";
+			
+		
+	}
 	
 
 	// 게시물 수정 페이지 접속 
