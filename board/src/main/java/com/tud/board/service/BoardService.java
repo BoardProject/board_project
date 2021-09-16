@@ -2,6 +2,7 @@ package com.tud.board.service;
 
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -29,6 +30,13 @@ public class BoardService {
 	
 	public Page<Board> list(Pageable pageable){
 		return boardRepository.findAll(pageable);
+	}
+	
+	public Board read(int id) {
+		return boardRepository.findById(id)		//Optional 타입 리턴 
+				.orElseThrow(()->{
+					return new IllegalArgumentException("요청한 글이 없습니다.");
+				});
 	}
 	
 }
