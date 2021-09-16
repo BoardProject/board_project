@@ -10,7 +10,7 @@
 			<input type="text" class="form-control" placeholder="Enter Title" id="title">
 		</div>
 
-		<div class="form-group">
+<div class="form-group">
 
   <label for="content">내용</label>
   <textarea class="form-control summernote" rows="5" id="content"></textarea>
@@ -20,6 +20,7 @@
 	<br/>
 	<button id= "btn-save" class="btn btn-primary">게시글 작성 완료</button>
 </div>
+<br/><br/>
 
 <script>
 $('.summernote').summernote({
