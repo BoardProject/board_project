@@ -18,7 +18,7 @@ public class BoardController {
 	
 	@GetMapping({ "", "/" })
 	public String index(Model model) {
-		model.addAttribute("boards", boardService.list()); // (key값,게시글목록) 글목록 들고 오기 
+		model.addAttribute("boards", boardService.list()); // (key값,게시글목록) -> (list페이지로 boards가 날라감, 글목록 들고 오기)
 		return "list";
 	}
 	

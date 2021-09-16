@@ -3,6 +3,7 @@
 <%@ include file="layout/header.jsp"%>
 
 <div class="container">
+
   <table class="table">
     <thead class="thead-dark">
       <tr>
@@ -14,7 +15,7 @@
     </thead>
    
 	    <tbody>
-	    <c:forEach var="board" items="${boards.content	}">
+	    <c:forEach var="board" items="${boards.content}">
 	      <tr>
 	        <td>${board.id}</td>
 	        <td>${board.title}</td>
