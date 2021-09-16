@@ -1,7 +1,7 @@
 server:
   port: 8000
   servlet:
-    context-path: /board
+    context-path:
     encoding:
       charset: UTF-8
       enabled: true
@@ -22,11 +22,11 @@ spring:
   jpa:
     open-in-view: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       use-new-id-generator-mappings: false
-    show-sql: true
+      show-sql: true
     properties:
       hibernate.format_sql: true
 
