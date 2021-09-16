@@ -25,5 +25,21 @@ public class BoardApiController {
 		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
 	}
 
+	
+	// 게시물 수정 요청  
+//	@GetMapping({ "/edit" })
+//	public ResponseDto<Integer> edit(@RequestBody Board board) {
+//		boardService.write(board);
+//		
+//		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);;
+//	}
+	
+	
+//	// 게시글 삭제 요청 
+//	@DeleteMapping({ "/delete" })
+//	public String delete() {
+//		return ;
+//	}
+
 
 }
