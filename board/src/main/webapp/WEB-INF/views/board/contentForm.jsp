@@ -7,11 +7,10 @@
 
 		<button class="btn btn-secondary" onclick="history.back()">뒤로 가기</button>
 		<a href="/board/${board.id}/editForm" class="btn btn-warning">수정</a>
-		<button id = "btn-delete" class="btn btn-dange">삭제</button>
-		<br/><br/>
+		<button id = "btn-delete" class="btn btn-danger">삭제</button>
+		<br/><br/> 
 		<div>
 			글 번호 : <span id="id"><i>${board.id}</i></span>
-			작성자 : <span><i>${board.user.username}</i></span>
 		</div>
 		<br/>
 		<div>
@@ -25,7 +24,7 @@
 		</div>
 		<hr/>
 </div>
-
+<br/><br/>
 <script src="/js/board.js"></script>
 
 <%@ include file="../layout/footer.jsp"%>
