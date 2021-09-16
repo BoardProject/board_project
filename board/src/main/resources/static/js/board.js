@@ -4,7 +4,9 @@ let index = {
 		$("#btn-save").on("click" , ()=> { // function(){} , ()=>{} 으로 쓰는 이유는 this를 바인딩하기 위해. function 사용하면 this 가 window 객체 가리켜 오류 날 수 있음
 			this.save();
 		});
-
+		$("#btn-delete").on("click" , ()=> { // function(){} , ()=>{} 으로 쓰는 이유는 this를 바인딩하기 위해. function 사용하면 this 가 window 객체 가리켜 오류 날 수 있음
+			this.deleteById();
+		});
 	},
 
 	
@@ -33,6 +35,21 @@ let index = {
 			alert(JSON.stringify(error));
 		}); // ajax 통신을 이용해서 받은 데이터를 json으로 변경하여 insert 요청
 		
+	},
+	
+	deleteById: function(){
+		var id = $("#id").text() // val() 이 아니라 text() 갖고와야 한다.
+ 
+		$.ajax({
+			type : "DELETE",
+			url : "/api/board/"+id,
+			dataType : "json"
+		}).done(function(resp){
+			alert("게시물이 삭제되었습니다.");
+			location.href = "/";
+		}).fail(function(error){ 
+			alert(JSON.stringify(error));
+		}); 
 		
 	},
 	

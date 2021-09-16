@@ -21,7 +21,7 @@
 	        <td class="text-center">${board.createDate}</td>
 	        <td class="text-center">${board.count}</td>
 	      </tr>
-	      </c:forEach>
+	    </c:forEach>
 	    </tbody>
     
   </table>
