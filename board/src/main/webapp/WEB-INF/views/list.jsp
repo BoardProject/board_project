@@ -3,23 +3,23 @@
 <%@ include file="layout/header.jsp"%>
 
 <div class="container">
-  <table class="table">
+  <table class="table table-hover">
     <thead class="thead-dark">
       <tr>
-        <th>글 번호</th>
-        <th>제목</th>
-        <th>작성일</th>
-        <th>조회수</th>
+        <th class="text-center">글 번호</th>
+        <th class="text-center">제목</th>
+        <th class="text-center">작성일</th>
+        <th class="text-center">조회수</th>
       </tr>
     </thead>
    
 	    <tbody>
 	    <c:forEach var="board" items="${boards.content}">
 	      <tr>
-	        <td>${board.id}</td>
-	        <td><a href="/board/${board.id}" class= "btn btn-primary">${board.title}</a></td>
-	        <td>${board.createDate}</td>
-	        <td>${board.count}</td>
+	        <td class="text-center">${board.id}</td>
+	        <td class="text-center"><a href="/board/${board.id}" class="btn">${board.title}</a></td>
+	        <td class="text-center">${board.createDate}</td>
+	        <td class="text-center">${board.count}</td>
 	      </tr>
 	      </c:forEach>
 	    </tbody>
