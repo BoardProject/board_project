@@ -19,6 +19,7 @@
 	</form>
 	<br/>
 	<button id= "btn-save" class="btn btn-primary">게시글 작성 완료</button>
+	<br/><br/>
 </div>
 <br/><br/>
 
