@@ -18,7 +18,7 @@ public class BoardService {
 
 
 	@Transactional //서비스가 많은 경우 하나의 Transaction으로 묶임 + 정합성 유지 
-	public void 글쓰기(Board board) {	// title, content
+	public void write(Board board) {	// title, content
 		board.setCount(0);
 		boardRepository.save(board);
 	}

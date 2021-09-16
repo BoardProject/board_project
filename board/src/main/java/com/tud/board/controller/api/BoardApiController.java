@@ -20,7 +20,7 @@ public class BoardApiController {
 
 	@PostMapping("/api/board")
 	public ResponseDto<Integer> save(@RequestBody Board board) {
-		boardService.글쓰기(board);
+		boardService.write(board);
 		
 		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
 	}

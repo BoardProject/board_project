@@ -33,8 +33,3 @@ height: 300
 
 <%@ include file="../layout/footer.jsp"%> 
 
-<<<<<<< HEAD
-<script src="/js/board.js"></script>
-<%@ include file="../layout/footer.jsp"%> 
-=======
->>>>>>> 2b1af949f6b53fb485c89837f6b80dca8ec6093a
