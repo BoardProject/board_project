@@ -20,7 +20,6 @@
 	        <td class="text-center"><a href="/board/${board.id}" class="btn">${board.title}</a></td>
 	        <td class="text-center">${board.createDate}</td>
 	        <td class="text-center">${board.count}</td>
-
 	      </tr>
 	    </c:forEach>
 	    </tbody>
