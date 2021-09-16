@@ -20,10 +20,26 @@ public class BoardApiController {
 
 	@PostMapping("/api/board")
 	public ResponseDto<Integer> save(@RequestBody Board board) {
-		boardService.글쓰기(board);
+		boardService.write(board);
 		
 		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
 	}
+
+	
+	// 게시물 수정 요청  
+//	@GetMapping({ "/edit" })
+//	public ResponseDto<Integer> edit(@RequestBody Board board) {
+//		boardService.write(board);
+//		
+//		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);;
+//	}
+	
+	
+//	// 게시글 삭제 요청 
+//	@DeleteMapping({ "/delete" })
+//	public String delete() {
+//		return ;
+//	}
 
 
 }

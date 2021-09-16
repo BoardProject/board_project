@@ -25,7 +25,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor 	// 파라미터 없는 생성자 만들어준다.
 @AllArgsConstructor // 모든 파라미터 대체해주는 생성자 만들어준다.
 @Entity				// DB 와 대응되 클래스 
-@DynamicInsert
 public class Board {
 	
 	
@@ -50,19 +49,6 @@ public class Board {
 	@CreationTimestamp
 	private Timestamp createDate;
 
-
-
-
-	public int getCount() {
-		return count;
-	}
-
-
-
-	//BoardSevice에서 setCount() 계속 가져오지 못하는 오류로 @Data 어노테이션 사용했지만 작성.
-	public void setCount(int count) {
-		this.count = count;
-	}
 
 
 }

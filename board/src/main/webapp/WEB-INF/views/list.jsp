@@ -14,10 +14,10 @@
     </thead>
    
 	    <tbody>
-	    <c:forEach var="board" items="${boards.content	}">
+	    <c:forEach var="board" items="${boards.content}">
 	      <tr>
 	        <td>${board.id}</td>
-	        <td>${board.title}</td>
+	        <td><a href="/board/${board.id}" class= "btn btn-primary">${board.title}</a></td>
 	        <td>${board.createDate}</td>
 	        <td>${board.count}</td>
 	      </tr>
@@ -26,7 +26,8 @@
     
   </table>
   
-<ul class="pagination justify-content-center">
+<!-- block 속성의 pagination을 flex 통해 가운데로 옮기기 -->  
+<ul class="pagination justify-content-center"> 
 	<c:choose>
 		<c:when test="${boards.first}">
 			<li class="page-item disabled"><a class="page-link" href="?page=${boards.number-1}">Previous</a></li>
