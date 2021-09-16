@@ -19,6 +19,7 @@
 	</form>
 	<br/>
 	<button id= "btn-save" class="btn btn-primary">게시글 작성 완료</button>
+	<br/><br/>
 </div>
 
 <script>
@@ -33,8 +34,3 @@ height: 300
 
 <%@ include file="../layout/footer.jsp"%> 
 
-<<<<<<< HEAD
-<script src="/js/board.js"></script>
-<%@ include file="../layout/footer.jsp"%> 
-=======
->>>>>>> 2b1af949f6b53fb485c89837f6b80dca8ec6093a
