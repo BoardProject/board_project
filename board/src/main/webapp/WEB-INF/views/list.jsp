@@ -17,11 +17,11 @@
 	    <c:forEach var="board" items="${boards.content}">
 	      <tr>
 	        <td>${board.id}</td>
-	        <td><a href="/board/${board.id}" class= "btn btn-primary">${board.title}</a></td>
+	        <td><a href="/board/${board.id}" class= "btn center">${board.title}</a></td>
 	        <td>${board.createDate}</td>
 	        <td>${board.count}</td>
 	      </tr>
-	      </c:forEach>
+	    </c:forEach>
 	    </tbody>
     
   </table>
