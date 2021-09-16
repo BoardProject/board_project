@@ -28,15 +28,24 @@ public class BoardService {
 		boardRepository.save(board);
 	}
 	
+	
+	@Transactional(readOnly = true)
 	public Page<Board> list(Pageable pageable){
 		return boardRepository.findAll(pageable);
 	}
 	
+	
+	@Transactional(readOnly = true)
 	public Board read(int id) {
 		return boardRepository.findById(id)		//Optional 타입 리턴 
 				.orElseThrow(()->{
 					return new IllegalArgumentException("요청한 글이 없습니다.");
 				});
+	}
+	
+	@Transactional
+	public void delete(int id) {
+		boardRepository.deleteById(id);  //deleteById는 원래 void method
 	}
 	
 }
