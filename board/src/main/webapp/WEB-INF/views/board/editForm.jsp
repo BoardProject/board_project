@@ -18,7 +18,7 @@
 
 	</form>
 	<br/>
-	<button id= "btn-edit" class="btn btn-primary">게시글 수정 완료</button>
+	<button id= "btn-edit" class="btn btn-primary">수정 완료</button>
 </div>
 
 <script>
@@ -27,7 +27,8 @@
         tabsize: 2,
         height: 300
       });
-    </script>
+</script>
+<br/><br/>
 
 <script src="/js/board.js"></script>
 <%@ include file="../layout/footer.jsp"%> 

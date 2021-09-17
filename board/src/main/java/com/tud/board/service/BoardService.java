@@ -43,6 +43,19 @@ public class BoardService {
 				});
 	}
 	
+	
+	public void edit(int id, Board requestBoard) { 
+		Board board = boardRepository.findById(id) // 영속화
+				.orElseThrow(()->{
+					return new IllegalArgumentException("요청한 글이 없습니다.");
+				});
+		board.setTitle(requestBoard.getTitle());
+		board.setContent(requestBoard.getContent());
+		//해당 함수 종료 시(Sevice 종료될 때) 트랜잭션 종료 -> 더티체킹 - 자동 업데이트.(DB flush)
+	}
+	
+	
+	
 	@Transactional
 	public void delete(int id) {
 		boardRepository.deleteById(id);  //deleteById는 원래 void method

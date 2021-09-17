@@ -53,9 +53,10 @@ public class BoardController {
 	
 
 	// 게시물 수정 페이지 접속 
-	@GetMapping({ "/editForm" })
-	public String editForm() {
-		return "editForm";
+	@GetMapping({ "/board/{id}/editForm" })
+	public String editForm(@PathVariable int id, Model model) {
+			model.addAttribute("board",boardService.read(id));
+			return "board/editForm";
 	}
 	
 	
