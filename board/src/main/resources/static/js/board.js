@@ -1,7 +1,7 @@
 //object
 let index = {
 	init: function(){
-		$("#btn-save").on("click" , ()=> { // function(){} , ()=>{} 으로 쓰는 이유는 this를 바인딩하기 위해. function 사용하면 this 가 window 객체 가리켜 오류 날 수 있음
+		$("#btn-save").on("click" , ()=>{ // function(){} , ()=>{} 으로 쓰는 이유는 this를 바인딩하기 위해. function 사용하면 this 가 window 객체 가리켜 오류 날 수 있음
 			this.save();
 		});
 		$("#btn-edit").on("click" , ()=> { 

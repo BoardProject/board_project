@@ -4,6 +4,7 @@
 <%@ include file="../layout/header.jsp"%>
 
 <div class="container">
+	
 
 		<button class="btn btn-secondary" onclick="history.back()">뒤로 가기</button>
 		<a href="/board/${board.id}/editForm" class="btn btn-warning">수정</a>
